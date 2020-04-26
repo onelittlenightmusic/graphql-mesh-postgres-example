@@ -1,0 +1,9 @@
+query {
+  allCities {
+    nodes {
+      id
+      name 
+      district
+    }
+  }
+}

@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  # # not suceeded
+  # mesh:
+  #   volumes:
+  #   - ./:/work
+  #   image: hiroyukiosaki/graphql-mesh:v0.1.10-all
+  #   ports:
+  #   - "4000:4000"
+  #   command:
+  #   - /bin/bash
+  #   - -c
+  #   - yarn install && yarn start
+    # - sleep 3600
+  postgres:
+    image: postgres
+    ports:
+    - "5432:5432"
+    environment:
+    - POSTGRES_PASSWORD=docker
+    volumes:
+    - ./world.sql:/docker-entrypoint-initdb.d/world.sql
