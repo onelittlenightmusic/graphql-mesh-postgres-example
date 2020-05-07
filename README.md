@@ -28,3 +28,9 @@ Behavior
 
 - #2 runs and initializes database
 - #1 accesses to #2 
+
+# Reference
+
+- [GraphQL Mesh](https://github.com/Urigo/graphql-mesh)
+- [GraphQL Mesh PostgreSQL example](https://github.com/Urigo/graphql-mesh/tree/master/examples/postgres-geodb)
+- [GraphQL Mesh Docker](https://github.com/onelittlenightmusic/graphql-mesh-docker)
