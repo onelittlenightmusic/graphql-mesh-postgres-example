@@ -3,10 +3,8 @@
 ## TL;DR
 
 ```sh
-# Run PostgreSQL on container
+# Run PostgreSQL and GraphQL Mesh on container
 docker-compose up -d
-# Run GraphQL Mesh
-yarn install && yarn start
 ```
 
 output
@@ -22,24 +20,11 @@ Then access to `http://localhost:4000`
 
 ## Architecture
 
-- On host
-  - #1 GraphQL Mesh with node.js (port 4000)
 - On Docker container
-  - PostgreSQL (port 5432 mapped to host)
+  - #1 GraphQL Mesh with node.js (port 4000)
+  - #2 PostgreSQL (port 5432 mapped to host)
 
 Behavior
 
 - #2 runs and initializes database
-- #1 accesses to #2 via 
-
-## Issues 
-
-I don't know why but the following structure always fails (no error came out and `yarn graphql-mesh serve` stops)
-- On Docker container
-  - #1 GraphQL Mesh with node.js (port 4000)
-  - PostgreSQL (port 5432 mapped to host)
-
-  ```sh
-  yarn run v1.22.
-  $ graphql-mesh serve                                                                                  Done in 8.18s.       
-  ```
+- #1 accesses to #2 

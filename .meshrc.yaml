@@ -2,4 +2,4 @@ sources:
   - name: Geo
     handler:
       postgraphile:
-        connectionString: postgres://postgres:docker@localhost:5432/postgres
+        connectionString: postgres://postgres:docker@postgres:5432/postgres
