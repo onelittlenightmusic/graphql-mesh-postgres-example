@@ -5,14 +5,9 @@ services:
     volumes:
     - ./.meshrc.yaml:/work/.meshrc.yaml
     - ./example-query.graphql:/work/example-query.graphql
-    image: hiroyukiosaki/graphql-mesh:latest-all
+    image: hiroyukiosaki/graphql-mesh:latest-all-alpine
     ports:
     - "4000:4000"
-    command:
-    - /bin/bash
-    - -c
-    - yarn remove graphql && yarn start
-    # - sleep 3600
   postgres:
     image: postgres
     ports:

@@ -3,3 +3,5 @@ sources:
     handler:
       postgraphile:
         connectionString: postgres://postgres:docker@postgres:5432/postgres
+serve:
+  exampleQuery: example-query.graphql
